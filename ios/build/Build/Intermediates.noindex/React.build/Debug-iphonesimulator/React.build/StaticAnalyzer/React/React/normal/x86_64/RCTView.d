@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTView.m \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTView.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTBorderDrawing.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/cherylfrankenfield/Desktop/demoApp/node_modules/react-native/React/Modules/RCTI18nUtil.h
