@@ -24,43 +24,46 @@ class App extends React.Component {
   };
 
   placeSelectedHandler = key => {
-    this.setState(prevState => {
-      return {
-        selectedPlace: prevState.places.find(place => {
-          return place.key === key;
-        })
-      };
-    });
-  }
+    this.props.onSelectPlace(key);
+    // this.setState(prevState => {
+    //   return {
+    //     selectedPlace: prevState.places.find(place => {
+    //       return place.key === key;
+    //     })
+    //   };
+    // });
+  };
 
   placeDeletedHandler = () => {
-    this.setState(prevState => {
-      return {
-        places: prevState.places.filter(place => {
-          return place.key !== prevState.selectedPlace.key;
-        }),
-        selectedPlace: null
-      };
-    });
+    this.props.onDeletePlace();
+    // this.setState(prevState => {
+    //   return {
+    //     places: prevState.places.filter(place => {
+    //       return place.key !== prevState.selectedPlace.key;
+    //     }),
+    //     selectedPlace: null
+    //   };
+    // });
   };
 
   modalClosedHandler = () => {
-    this.setState({
-       selectedPlace: null
-    });
+    this.props.onDeselectPlace();
+    // this.setState({
+    //    selectedPlace: null
+    // });
   }
 
   render() {
     return (
       <View style={styles.container}>
         <PlaceDetail
-          selectedPlace={this.state.selectedPlace} onItemDeleted={this.placeDeletedHandler} onModalClosed={this.modalClosedHandler}
+          selectedPlace={this.props.selectedPlace} onItemDeleted={this.placeDeletedHandler} onModalClosed={this.modalClosedHandler}
         />
         <PlaceInput
           onPlaceAdded={this.placeAddedHandler}
         />
         <PlaceList
-          places={this.state.places} onItemSelected={this.placeSelectedHandler}
+          places={this.props.places} onItemSelected={this.placeSelectedHandler}
         />
       </View>
     );
