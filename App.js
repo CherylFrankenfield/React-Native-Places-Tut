@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet,View } from 'react-native';
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
-import placeImage from './src/assets/tagaytay.png';
+// import placeImage from './src/assets/tagaytay.png';
 import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
 
 export default class App extends React.Component {
@@ -17,7 +17,9 @@ export default class App extends React.Component {
         places: prevState.places.concat({
           key: Math.random(),
           name: placeName,
-          image: placeImage
+          image: {
+            uri: 'https://images.pexels.com/photos/15382/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          }
         })
       };
     });
