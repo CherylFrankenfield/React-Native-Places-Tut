@@ -1,7 +1,8 @@
 import {Navigation} from 'react-native-navigation';
 
-Navigation.startTabsBasedApp({
-  tabs: [
+const startTabs = () => {
+  Navigation.startTabBasedApp({
+    tabs: [
       {
         screen: 'awesome-places.FindPlaceScreen',
         label: 'Find Place',
@@ -13,4 +14,8 @@ Navigation.startTabsBasedApp({
         title: 'Share Place'
       }
     ]
-});
+  });
+
+};
+
+export default startTabs;
