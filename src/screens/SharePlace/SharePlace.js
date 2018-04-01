@@ -5,10 +5,14 @@ import {connect} from 'react-redux';
 import {addPlace} from '../../store/actions/index';
 
 class SharePlaceScreen extends Component {
+  placeAddedHandler = placeName => {
+    this.props.onAddPlace(placeName);
+  }
+
   render() {
     return(
       <View>
-        <PlaceInput onPlaceAdded={} />
+        <PlaceInput onPlaceAdded={this.placeAddedHandler} />
       </View>
     );
   }
