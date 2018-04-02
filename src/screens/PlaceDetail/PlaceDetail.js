@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,Image,Text,StyleSheet,TouchableOpacity} from 'react-native';
-// import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const placeDetail = props => {
   return(
@@ -11,7 +11,7 @@ const placeDetail = props => {
       </View>
       <View>
         <TouchableOpacity onPress={props.onItemDeleted}>
-          <View style={styles.deleteButton}
+          <View style={styles.deleteButton}>
             <Icon size={30} name='ios-trash' color='red'/>
           </View>
         </TouchableOpacity>
