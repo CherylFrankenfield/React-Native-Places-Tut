@@ -1,26 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {View,Image,Text,StyleSheet,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {connect} from 'react-redux';
 import {deletePlace} from '../../store/actions/index';
 
-const placeDetail = props => {
-  return(
-    <View style={styles.container}>
-      <View>
-        <Image source={props.selectedPlace.image} style={styles.placeImage}/>
-        <Text style={styles.placeName}>{props.selectedPlace.name}</Text>
+class PlaceDetail extends Component {
+  placeDeletedHandler = () => {
+    this.onDeletePlace(this.props.selectedPlace.key)
+  }
+
+  render() {
+    return(
+      <View style={styles.container}>
+        <View>
+          <Image source={props.selectedPlace.image} style={styles.placeImage}/>
+          <Text style={styles.placeName}>{props.selectedPlace.name}</Text>
+        </View>
+        <View>
+          <TouchableOpacity onPress={props.onItemDeleted}>
+            <View style={styles.deleteButton}>
+              <Icon size={30} name='ios-trash' color='red'/>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View>
-        <TouchableOpacity onPress={props.onItemDeleted}>
-          <View style={styles.deleteButton}>
-            <Icon size={30} name='ios-trash' color='red'/>
-          </View>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -37,13 +43,13 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
-    onDeletePlace: (key) => dispatch
+    onDeletePlace: (key) => dispatch(deletePlace(key))
   };
 };
 
-export default placeDetail;
+export default connect(null, mapDispatchToProps)(PlaceDetail);
 
 // <TouchableOpacity>
 //   <Icon size={30} name='ios-trash' color='red'/>
