@@ -1,6 +1,8 @@
 import React from 'react';
 import {View,Image,Text,StyleSheet,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {connect} from 'react-redux';
+import {deletePlace} from '../../store/actions/index';
 
 const placeDetail = props => {
   return(
@@ -34,6 +36,12 @@ const styles = StyleSheet.create({
     fontSize: 28,
   }
 });
+
+const mapStateToProps = dispatch => {
+  return {
+    onDeletePlace: (key) => dispatch
+  };
+};
 
 export default placeDetail;
 
