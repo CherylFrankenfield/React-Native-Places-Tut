@@ -5,6 +5,22 @@ import {connect} from 'react-redux';
 import {addPlace} from '../../store/actions/index';
 
 class SharePlaceScreen extends Component {
+  constructor(props){
+    super(props);
+    this.props.navigator.setOnNavigatorEvent(this.onNsetOnNavigatorEvent);
+  }
+
+  setOnNavigatorEvent = event => {
+    if (event.type === 'NavBarButtonPress') {
+      if (event.id === 'sideDrawerToggle') {
+        this.props.navigator.toggleDrawer({
+          side: 'left'
+        })
+      }
+    }
+  }
+  // console.log(event);
+
   placeAddedHandler = placeName => {
     this.props.onAddPlace(placeName);
   }
