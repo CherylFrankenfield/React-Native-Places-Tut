@@ -2,16 +2,24 @@ import React, {Component} from 'react';
 import {View,TextInput,Button,StyleSheet} from 'react-native';
 import DefaultInput from '../UI/DefaultInput/DefaultInput';
 
-class PlaceInput extends Component {
-  state = {
-    placeName: ''
-  };
+const placeInput = props => (
+  <DefaultInput placeholder='Place Name'
+    value={props.placeName}
+    onChangeText={props.onChangeText}
+  />
+);
 
-  placeNameChangedHandler = val => {
-    this.setState({
-      placeName: val
-    });
-  };
+export default placeInput;
+//gets turned into functional component.
+  // state = {
+  //   placeName: ''
+  // };
+  //
+  // placeNameChangedHandler = val => {
+  //   this.setState({
+  //     placeName: val
+  //   });
+  // };
 
 //Do not need after refactoring w/o button in return.
   // placeSubmitHandler = () => {
@@ -28,17 +36,7 @@ class PlaceInput extends Component {
     //   };
     // });
 
-  render() {
-    return(
-      <DefaultInput placeholder='Place Name'
-        value={this.state.placeName}
-        onChangeText={this.placeNameChangedHandler}
-      />
-    );
-  }
-}
 
-export default PlaceInput;
 
 // <TextInput
 // style={styles.placeInput}
