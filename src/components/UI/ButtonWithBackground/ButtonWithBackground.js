@@ -17,7 +17,7 @@ const buttonWithBackground = props => {
   return <TouchableOpacity onPress={props.onPress}>
     {content}
   </TouchableOpacity>
-}
+};
 
 const styles = StyleSheet.create({
     button: {
